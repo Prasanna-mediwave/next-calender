@@ -2,26 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.default-theme {
+  --primary: 4 94 179;
+  --primary-content: 255 255 255;
+  --secondary: 255 178 74;
+  --secondary-content: 49 49 49;
+  --accent: 3 60 124;
+  --accent-content: 255 255 255;
+  --baseColor: 49 49 49;
+  --titleColor: 4 94 179;
+  --container: 249 249 249;
+  --neutral: 255 255 255;
+  --outline: 122 117 117;
+  --info: 37 99 235;
+  --success: 18 110 52;
+  --warning: 217 119 6;
+  --error: 220 38 38;
+  --disabled: 233 236 239;
+  --transparent: transparent;
+  --mood-verypoorly: #f99f2c;
+  --mood-poor: #ffda47;
+  --mood-alright: #84acd9;
+  --mood-well: #a4bc39;
+  --mood-verywell: #4b9f88;
+  --font-header: "Dosis", "sans-serif";
+  --font-body: "Montserrat", "sans-serif";
 }

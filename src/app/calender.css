@@ -1,0 +1,249 @@
+.calendar-section {
+  @apply relative inline-block;
+}
+
+.calendar-container.open-calendar-popup {
+  @apply absolute right-0 left-0 w-max z-50;
+}
+.calendar-container.close-calendar-popup {
+  @apply hidden;
+}
+.calendar-container.open-calendar-popup.calendar-top {
+  bottom: calc(
+    100% + 10px
+  ); /* Adjust the value as needed to position the calendar */
+}
+
+.calendar-container.open-calendar-popup.calendar-bottom {
+  top: calc(
+    100% + 10px
+  ); /* Adjust the value as needed to position the calendar */
+}
+.calendar-container {
+  @apply min-h-[320px] font-body inline-flex bg-neutral border border-solid border-outlineColor/50;
+}
+
+.calendar-input-group {
+  @apply block text-left;
+}
+
+.calendar-input-group label {
+  @apply mb-2 inline-block;
+}
+
+.input-container {
+  @apply flex items-center relative;
+}
+
+.calendar-input {
+  @apply w-full min-h-[48px] py-2 px-3 border border-solid border-outlineColor/50 rounded-lg hover:border-primary focus-visible:outline-primary;
+}
+
+.icon-container {
+  @apply inline-block w-6 h-6 absolute top-1/2 right-[5px] -translate-y-1/2 pointer-events-none;
+}
+.icon-container path {
+  @apply fill-primary;
+}
+.calendar-section {
+  @apply w-[300px] mx-auto backdrop:my-0;
+}
+
+.calendar-header {
+  @apply flex justify-center items-center p-2 min-h-[56px];
+}
+
+.calendar-btn {
+  @apply hidden;
+}
+
+.calendar-month {
+  @apply m-0;
+}
+
+.calendar-grid {
+  @apply grid grid-cols-7 gap-[5px] m-2;
+}
+
+.calendar-day {
+  @apply disabled:bg-disabled disabled:rounded-full relative flex  justify-center items-center w-7 h-7 bg-neutral cursor-pointer border-none m-auto;
+}
+.isDisabled {
+  @apply bg-disabled rounded-full;
+}
+.calendar-day.empty {
+  @apply cursor-default;
+}
+
+.calendar-day.today {
+  @apply bg-primary font-bold text-neutral rounded-full;
+}
+
+.calendar-day:focus {
+  @apply outline outline-2 outline-primary rounded-full outline-offset-[3px];
+}
+
+.calendar-day.selected {
+  @apply border-2 border-solid border-primary rounded-full;
+}
+.calendar-weekdays {
+  @apply grid px-[10px] py-2 grid-cols-7 gap-[1px] justify-between;
+}
+
+.calendar-weekday {
+  @apply flex justify-center items-center h-6;
+}
+
+/* CSS */
+/* Styles for the dropdown container */
+.calendar-dropdown-container {
+  @apply relative inline-block mx-[5px] my-0;
+}
+
+/* Styles for the dropdown button */
+.calendar-month-button {
+  @apply min-w-[100px] py-[5px] pr-[5px] pl-[10px] bg-container border-none cursor-pointer flex justify-between items-center;
+}
+.calendar-month-button:focus-visible {
+  @apply outline-2 outline outline-primary outline-offset-[3px];
+}
+.monthDropdown-close {
+  @apply hidden;
+}
+
+.yearDropdown-close {
+  @apply hidden;
+}
+
+/* Styles for the dropdown options list */
+.calendar-month-list {
+  @apply min-w-[90px] absolute top-full left-0 z-10 list-none p-0 m-0 border border-solid border-outlineColor bg-neutral shadow-2xl max-h-64 overflow-auto;
+}
+
+/* Styles for the individual dropdown option */
+.calendar-month-option {
+  @apply cursor-pointer text-[14px] focus-visible:bg-primary focus-visible:text-neutral outline-none;
+}
+
+/* Styles for the dropdown button */
+.calendar-year-button {
+  @apply min-w-[75px] py-[5px] pr-[5px] pl-[10px] bg-container border-none cursor-pointer flex justify-between items-center;
+}
+
+/* Styles for the dropdown options list */
+.calendar-year-list {
+  @apply min-w-[75px] absolute top-full left-0 z-10 list-none p-0 m-0 border border-solid border-outlineColor bg-neutral shadow-2xl max-h-64 overflow-auto;
+}
+.calendar-year-button:focus-visible {
+  @apply outline-2 outline outline-primary outline-offset-[3px];
+}
+/* Styles for the individual dropdown option */
+.calendar-year-option {
+  @apply cursor-pointer text-[14px] focus-visible:bg-primary focus-visible:text-neutral outline-none;
+}
+
+/* Styles for day dots container */
+.calendar-day-dots {
+  @apply flex justify-center items-center mt-[5px] absolute bottom-[2px] left-0 right-0;
+}
+
+/* Styles for individual dots */
+.calendar-day-dots .dot {
+  @apply w-[6px] h-[6px] rounded-full mx-[2px] my-0;
+}
+
+/* Styles for different appointment statuses */
+.dot-missed {
+  @apply bg-error;
+}
+
+.dot-cancelled {
+  @apply bg-warning;
+}
+
+.dot-incomplete {
+  @apply bg-info;
+}
+
+.dot-completed {
+  @apply bg-success;
+}
+
+/* Style for the "more" dot */
+.dot-more {
+  @apply text-[10px] ml-[2px];
+}
+
+/* CSS for the selected dates list */
+.selected-dates-list {
+  @apply min-w-[120px] flex-1 p-[10px] border-l border-solid border-outlineColor/50 list-none m-0 min-h-[255px] max-h-[299px] overflow-auto overflow-x-hidden;
+  height: calc(100% - 65px);
+}
+
+.selected-list-block {
+  @apply border-l border-b border-solid border-outlineColor/50 px-5 py-[13px];
+}
+
+.selected-list-block p {
+  @apply m-auto font-bold;
+}
+
+.selected-dates-list li {
+  @apply mb-[5px] flex items-center;
+}
+
+/* CSS for the close button */
+.close-button {
+  @apply border-none bg-transparent  cursor-pointer text-[14px] ml-[5px] text-error;
+  line-height: 1;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* CSS for the tooltip */
+.tooltip {
+  @apply absolute bg-baseColor/80 text-neutral p-[10px] rounded-[5px] text-[14px] block z-50 w-max;
+}
+
+.tooltip .tooltip_info {
+  @apply m-0;
+}
+
+.tooltip-dot {
+  @apply inline-flex shrink-0 w-[6px] h-[6px] rounded-full mx-[2px] my-0;
+}
+
+.tooltip-list {
+  @apply flex items-center mb-2;
+}
+.tooltip-list:last-child {
+  @apply mb-0;
+}
+.tooltip-dot {
+  @apply mr-1;
+}
+.App {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, max-content));
+  font-family: sans-serif;
+  text-align: center;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.heading {
+  display: block;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
