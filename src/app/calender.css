@@ -66,7 +66,7 @@
 }
 
 .calendar-day {
-  @apply disabled:bg-disabled disabled:rounded-full relative flex  justify-center items-center w-7 h-7 bg-neutral cursor-pointer border-none m-auto;
+  @apply disabled:bg-disabled disabled:rounded-full relative flex  justify-center items-center w-7 h-7 bg-neutral cursor-pointer border-none m-auto text-baseColor text-xs;
 }
 .isDisabled {
   @apply bg-disabled rounded-full;
@@ -196,17 +196,6 @@
 .close-button {
   @apply border-none bg-transparent  cursor-pointer text-[14px] ml-[5px] text-error;
   line-height: 1;
-}
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }
 
 /* CSS for the tooltip */
